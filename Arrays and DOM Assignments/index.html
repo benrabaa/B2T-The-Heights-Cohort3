@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+			body{
+				text-align: center;
+			}
+			td,th {
+    			border-bottom: 6px solid rgb(0, 78, 135);
+    			
+    			alignment-baseline: central;
+    			padding: 10px;
+    			text-align: center;
+    			height: 50px;
+				}
+
+			table{
+				position: center;
+				margin-left: auto;
+				margin-right: auto;
+
+				}
+			body{
+				align-content: center;
+
+				}
+			th,td:hover {
+				background-color:lightgrey;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Task: Arrays and DOM</h1>
+		<h1 id="head1"></h1>
+		<h1 id="head2"></h1>
+		<h1 id="head3"></h1>
+
+		<table>
+			<tr>
+				<th>The Original Array </th>
+				<th>The New Fruits</th>
+				<th>The New Array separated by (with)</th>
+				<th>The Sorted Array</th>
+			</tr>
+			<tr>			
+			    <td id="Array1"></td>	
+				<td id="Fruit"></td>
+				<td id="Array2"></td>
+				<td id="Array3"></td>
+			</tr>
+				
+		</table>
+		<script type="text/javascript">
+			var fruits=["apple","orange","kiwi"];
+			var input = prompt("Add More Fruits!!");
+
+			document.getElementById("Array1").innerHTML="["+fruits+"]";
+			document.getElementById("Fruit").innerHTML=input;
+			fruits.push(input);
+			document.getElementById("Array2").innerHTML="["+fruits.join(" with ")+"]"
+			document.getElementById("Array3").innerHTML="["+fruits.sort()+"]";
+
+
+		</script>
+	</body>
+</html>
