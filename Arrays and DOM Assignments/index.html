@@ -54,13 +54,14 @@
 		</table>
 		<script type="text/javascript">
 			var fruits=["apple","orange","kiwi"];
-			var input = prompt("Add More Fruits!!");
+			var input = prompt("Add More Fruits!!").toLowerCase();
 
 			document.getElementById("Array1").innerHTML="["+fruits+"]";
 			document.getElementById("Fruit").innerHTML=input;
 			fruits.push(input);
-			document.getElementById("Array2").innerHTML="["+fruits.join(" with ")+"]"
-			document.getElementById("Array3").innerHTML="["+fruits.sort()+"]";
+			document.getElementById("Array2").innerHTML="["+fruits+"]"
+			fruits.sort();
+			document.getElementById("Array3").innerHTML="["+fruits.join(" with ")+"]";
 
 
 		</script>
