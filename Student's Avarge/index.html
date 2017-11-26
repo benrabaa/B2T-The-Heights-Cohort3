@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<script type="text/javascript">
+		var grade =[80,77,88,95,68];
+		var sum=0;
+		//Calculate the sum for all grades
+		for (var i = 0; i < grade.length ; i++) {
+				sum=sum+grade[i];
+		}
+		//Calculate the Avarge
+		var avarge=sum/grade.length;	
+        //Finding the student's letter grade for corresponding Average
+			if (avarge <=60 ){
+				console.log("The Average is "+avarge+" and Letter Grade of Student is "+ "F")
+			}else if(avarge<=70){
+				console.log("The Average is "+avarge+" and Letter Grade of Student is "+ "D")
+			}else if(avarge<=79){
+				console.log("The Average is "+avarge+" and Letter Grade of Student is "+ "c")
+			}else if(avarge<=89){
+				console.log("The Average is "+avarge+" and Letter Grade of Student is "+ "B")
+			}else if (avarge<=100){
+				console.log("The Average is "+avarge+" and Letter Grade of Student is "+ "A")
+			}		
+	</script>
+
+	<h1>This is the Task for finding the Student's Average</h1>
+	<h1>The result in the Console</h1>
+	</body>
+</html>
