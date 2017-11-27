@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<style type="text/css">
+			body{
+				text-align: center;
+			    font-family:Book Antiqua;
+  	 			 font-weight: bold;
+
+			}	
+
+			#button1{
+				margin-right:40px;
+				background-color: rgb(9, 12, 253);
+    			color: white;
+    			padding: 14px 20px;
+    			margin: 8px 0;
+    			border: none;
+    			border-radius: 4px;
+    			cursor: pointer;
+			}
+			#Fname,#Lname{
+    			border-radius: 4px;
+    			width: 30%;
+
+    			padding: 20px 30px;
+    			margin: 8px 0;
+    			display: inline-block;
+    			border: 1px solid #ccc;
+    			border-radius: 4px;
+    			box-sizing: border-box;	
+				padding: 5px;
+				margin: 5px
+			}
+
+		</style>
+
+	<body>
+		
+		<p id="display"></p>
+		<form>
+			First Name:<input type="text" id="Fname" placeholder="Enter first name"><br>
+			Last Name:<input type="text" id="Lname" placeholder="Enter last name" ><br>
+			<input type="button" id="button1" value="Submit" onclick="getFormValue()" >
+		</form>
+
+		<script type="text/javascript">
+	
+			function getFormValue(){
+				var fname=document.getElementById('Fname').value;
+				var lname=document.getElementById('Lname').value;
+				fname
+				document.getElementById('display').innerHTML="Hello "+fname.charAt(0).toUpperCase()+fname.slice(1).toLowerCase()+' '+lname.charAt(0).toUpperCase()+lname.slice(1).toLowerCase();	
+			}
+
+		</script>
+	</body>
+</html>
