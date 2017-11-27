@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+		body{
+				text-align: center;
+			    font-family:Book Antiqua;
+  	 			 font-weight: bold;
+
+			}
+		table{
+				position: center;
+				margin-left:auto;
+				margin-right: auto; 
+			}
+
+		th {
+    			border-bottom: 6px solid rgb(0, 78, 135);
+    			alignment-baseline: central;
+    			padding: 5px;
+    			text-align: center;
+    			height: 30px;
+    			background-color:lightgrey;
+			}
+		td {
+				padding: 5px;
+    			height: 30px;
+
+			}		
+
+		#button1{
+				margin-right:40px;
+				background-color: rgb(9, 12, 253);
+    			color: white;
+    			padding: 14px 20px;
+    			margin: 8px 0;
+    			border: none;
+    			border-radius: 4px;
+    			cursor: pointer;
+    			font-family:Book Antiqua;
+  	 			 font-weight: bold;
+				}	
+	#col1,#col2{
+    			border-radius: 4px;
+    			width: 30%;
+
+    			padding: 20px 30px;
+    			margin: 8px 0;
+    			display: inline-block;
+    			border: 1px solid #ccc;
+    			border-radius: 4px;
+    			box-sizing: border-box;	
+				padding: 5px;
+				margin: 5px
+				}	
+		</style>
+	</head>
+	<body>
+		First Name:<input type="text" id="col1" placeholder="Enter First Name"><br>
+		Last Name:<input type="text" id="col2" placeholder="Enter Last Name"><br>
+		<input type="button" id ="button1" onclick="insertRow()" value="Insert Row">
+		
+		<table id="myTable" border="1">
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+			</tr>
+			<tr>
+				 <td>Clifford</td>
+				 <td>Harris</td>
+
+			</tr>
+		</table><br>
+
+		
+
+		<script type="text/javascript">
+			
+			function insertRow(){
+				var trTag = document.createElement("tr");
+				var tdNode1 = document.createElement("td");
+				var tdNode2 = document.createElement("td");
+				
+
+				var CValue1=document.getElementById('col1').value;
+				var CValue2=document.getElementById('col2').value;
+				if (CValue1 !== "" && CValue2 !== ""){
+					tdNode1.innerHTML=CValue1.charAt(0).toUpperCase()+CValue1.slice(1).toLowerCase();
+					tdNode2.innerHTML=CValue2.charAt(0).toUpperCase()+CValue2.slice(1).toLowerCase();
+			
+					trTag.appendChild(tdNode1);
+					trTag.appendChild(tdNode2);
+
+					var Parentelement = document.getElementById("myTable");
+					Parentelement.appendChild(trTag);
+				}else{
+				    confirm("Please Enter First and Last Name!");
+				}
+ 
+			}
+
+
+		</script>
+	</body>
+</html>

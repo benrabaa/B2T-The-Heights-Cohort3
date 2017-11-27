@@ -51,8 +51,11 @@
 			function getFormValue(){
 				var fname=document.getElementById('Fname').value;
 				var lname=document.getElementById('Lname').value;
-				fname
-				document.getElementById('display').innerHTML="Hello "+fname.charAt(0).toUpperCase()+fname.slice(1).toLowerCase()+' '+lname.charAt(0).toUpperCase()+lname.slice(1).toLowerCase();	
+				if(fname !== "" && lname !==""){
+					document.getElementById('display').innerHTML="Hello "+fname.charAt(0).toUpperCase()+fname.slice(1).toLowerCase()+' '+lname.charAt(0).toUpperCase()+lname.slice(1).toLowerCase();
+				}else{
+				    confirm("Please Enter First and Last Name!");
+				}
 			}
 
 		</script>
